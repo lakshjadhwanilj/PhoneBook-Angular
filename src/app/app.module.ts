@@ -8,6 +8,7 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

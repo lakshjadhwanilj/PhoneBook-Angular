@@ -13,7 +13,9 @@ export class HomeComponent implements OnInit {
   contactList: Contact[]
   
   constructor(private router: Router, private contactService: ContactService) { }
-
+  
+  test: string = ''
+  
   ngOnInit() {
     this.contactService.getContacts().subscribe(data => {
       this.contactList = data.sort((a, b) => {
