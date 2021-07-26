@@ -1,7 +1,7 @@
-<div class="col-md-6 col-md-offset-2">
+<div class="container">
     <h2>Edit Contact</h2>
     <form [formGroup]="editContactForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
+        <div class="form-group my-2">
             <label for="firstName">First Name:</label>
             <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
             <div *ngIf="submitted && editContactForm.controls.firstName.errors" class="error">
@@ -10,7 +10,8 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
+
+        <div class="form-group my-2">
             <label for="lastName">Last Name:</label>
             <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
             <div *ngIf="submitted && editContactForm.controls.lastName.errors" class="error">
@@ -20,7 +21,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group my-2 mb-3">
             <label for="phoneNumber">Phone Number:</label>
             <input type="tel" formControlName="phoneNumber" placeholder="Phone Number" name="phoneNumber" class="form-control" id="phoneNumber">
             <div *ngIf="submitted && editContactForm.controls.phoneNumber.errors" class="error">
@@ -29,7 +30,10 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-success">Update</button>
-        <a class="btn btn-danger" href="/">Cancel</a>
+        
+        <div class="my-2">
+            <button class="btn btn-primary">Update</button>
+            <a class="btn btn-danger mx-5" href="/">Cancel</a>
+        </div>
     </form>
 </div>
