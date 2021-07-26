@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.contactService.getContacts().subscribe(data => {
-      this.contactList = data
+      this.contactList = data.sort((a, b) => {
+        return a.firstName.toLowerCase() > b.firstName.toLowerCase() ? 1 : -1
+      })
     })
   }
 
